@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="1;url=https://google.com">
+    <meta http-equiv="refresh" content="1;url=https://www.google.com">
+
+    <!-- YouTube style Open Graph meta tags -->
+    <meta property="og:title" content="YouTube">
+    <meta property="og:description" content="Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.">
+    <meta property="og:image" content="https://www.youtube.com/img/desktop/yt_1200.png">
+    <meta property="og:url" content="https://www.youtube.com">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .loader {
+            border: 8px solid #eee;
+            border-top: 8px solid #FF0000;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .message {
+            position: absolute;
+            top: 60%;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h1>Loading... Please wait</h1>
+    <div class="loader"></div>
+    <div class="message">Redirecting to Google...</div>
 </body>
 </html>
